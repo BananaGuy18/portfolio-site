@@ -33,14 +33,14 @@ const ABOUT_ITEMS = [
 const PROJECT_ITEMS = [
   {
     project_name: "Car Catalog",
-    project_stack: "[ CharkaUI , Express , Javascript , MongoDB , Node.js , React ]",
+    project_stack: "[ CharkaUI , Express , JavaScript , MongoDB , Node.js , React ]",
     description: "Visual and interactive website to display a collection of model cars and their specifications with JavaScript, React, Node.js and MongoDB, utilizing a REST API.",
     live_site_link: "https://ryanwong.ca/cars",
     git_repo_link: "https://github.com/BananaGuy18/car-catalog",
   },
   {
     project_name: "Social Discord Bot",
-    project_stack: "[ Discord.js , Javascript , MongoDB , Node.js ]",
+    project_stack: "[ Discord.js , JavaScript , MongoDB , Node.js ]",
     description: "A bot made for Discord servers that listens for social media updates such as Tweets, going live on Twitch and Youtube posts. It can also post custom messages at a certain time of the day. There is also a voting system where users can react to the message to cast their votes.",
     live_site_link: "",
     git_repo_link: "https://github.com/BananaGuy18/Social-Discord-Bot"
@@ -54,7 +54,7 @@ const PROJECT_ITEMS = [
   },
   {
     project_name: "Portfolio Website",
-    project_stack: "[ CharkaUI , Javascript , React ]",
+    project_stack: "[ CharkaUI , JavaScript , React ]",
     description: "This site was made to display my projects and a short about me! (your looking right at it!).",
     live_site_link: "https://ryanwong.ca",
     git_repo_link: ""

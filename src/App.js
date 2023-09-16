@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import AboutPage from "./pages/AboutPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const aboutScroll = useRef(null);
@@ -36,6 +37,7 @@ function App() {
   return (
     <>
       <Navbar scrollToSection={scrollToSection} />
+        <ScrollToTop />
         <HomePage />
         <AboutPage aboutScroll={aboutScroll}/>
         <ProjectsPage projectsScroll={projectsScroll} />
