@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { useRef } from "react";
+import HomePage from "./pages/HomePage";
+import Navbar from "./components/Navbar";
+import AboutPage from "./pages/AboutPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
+  const aboutScroll = useRef(null);
+  const projectsScroll = useRef(null);
+  const contactScroll = useRef(null);
+
+
+  const scrollToSection = (section) => {
+    let elementRef;
+    switch(section) {
+      case ".about":
+        elementRef = aboutScroll;
+        break;
+      case ".projects":
+        elementRef = projectsScroll;
+        break;
+      case ".contact":
+        elementRef = contactScroll;
+        break;
+      default:
+        return;
+    }
+
+    console.log(section)
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: "smooth"
+    })
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar scrollToSection={scrollToSection} />
+        <HomePage />
+        <AboutPage aboutScroll={aboutScroll}/>
+        <ProjectsPage projectsScroll={projectsScroll} />
+        <ContactPage contactScroll={contactScroll} />
+    </>
   );
 }
 
