@@ -1,13 +1,22 @@
-import { Box, Flex, Text, IconButton, Stack, Collapse, Icon, Link, Popover, PopoverTrigger, useColorModeValue, useDisclosure, VStack } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, ChevronDownIcon } from "@chakra-ui/icons";
+import { Box, Flex, Text, IconButton, Stack, Collapse, Icon, Link, Popover, PopoverTrigger, useDisclosure, VStack } from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { NAV_ITEMS } from "../constants";
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 function Navbar({ scrollToSection }) {
   const { isOpen, onToggle } = useDisclosure();
+  const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start({ opacity: 1, y: 0, transition: { duration: 1, ease: "easeIn" } });
+  }, [controls]);
 
   return (
     <Box
       top={"0"}
+      className="fade-in"
+      bgColor={"primary.bg"}
     >
       <Flex
         minH={"60px"}
@@ -18,6 +27,10 @@ function Navbar({ scrollToSection }) {
         textAlign={"center"}
         pt={"1rem"}
       >
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={controls}
+        >
         <Flex alignItems="center">
           <VStack>
             <Text
@@ -61,19 +74,20 @@ function Navbar({ scrollToSection }) {
               )
             }
             _hover={{
-              bgColor: "primary.main"
+              bgColor: "primary.main",
             }}
             variant={"ghost"}
             aria-label={"Toggle Navigation"}
           />
         </Flex>
+        </motion.div>
       </Flex>
 
       <Collapse
         in={isOpen}
         animateOpacity
       >
-        <MobileNav scrollToSection={scrollToSection}/>
+        <MobileNav scrollToSection={scrollToSection} />
       </Collapse>
     </Box>
   );
@@ -140,12 +154,11 @@ const MobileNavItem = ({ scrollToSection, label, children, href }) => {
   return (
     <Stack
       spacing={4}
-      onClick={children && onToggle}
+      onClick={onToggle}
     >
       <Flex
         py={2}
         as={Link}
-        // href={href ?? "#"}
         justify={"space-between"}
         _hover={{
           textDecoration: "none",

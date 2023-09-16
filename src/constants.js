@@ -17,7 +17,7 @@ const NAV_ITEMS = [
 const ABOUT_ITEMS = [
     {
         title: "introduction",
-        description: `" hey! my name is ryan, a student and passionate developer with the desire to expand my knowledge and learn new things.\n\nfrom front end user interfaces to designing back end architectures, I enjoy every aspect of development.\n\ni always enjoy meeting new people, so let's connect! "`
+        description: `" hey! my name is ryan, a student and passionate developer with the desire to expand my knowledge and learn new things.\n\ni'm currently a second year student attending the University of Calgary pursing Computer Science and minoring in Management and Society\n\nfrom front end user interfaces to designing back end architectures, I enjoy every aspect of development.\n\ni always enjoy meeting new people, so let's connect! "`
     },
     {
         title: "skills",
@@ -35,7 +35,7 @@ const PROJECT_ITEMS = [
     project_name: "Car Catalog",
     project_stack: "[ CharkaUI , Express , JavaScript , MongoDB , Node.js , React ]",
     description: "Visual and interactive website to display a collection of model cars and their specifications with JavaScript, React, Node.js and MongoDB, utilizing a REST API.",
-    live_site_link: "https://ryanwong.ca/cars",
+    live_site_link: "https://cars.ryanwong.ca/",
     git_repo_link: "https://github.com/BananaGuy18/car-catalog",
   },
   {

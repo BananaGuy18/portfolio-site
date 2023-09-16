@@ -2,16 +2,22 @@ import { Text, Flex, Box, Link } from "@chakra-ui/react";
 
 const ContactItem = ({ item, contactScroll }) => {
   return (
-    
-      <Box
-        ml={{ base: "5rem", md: "5rem" }}
-        mt={{ base: "5rem", md: "5rem" }}
+    <Box
+      ml={{ base: "5rem", md: "5rem" }}
+      mt={{ base: "5rem", md: "5rem" }}
+    >
+      <Link
+        _hover={{ textDecoration: "none" }}
+        href={item.link !== "" ? item.link : contactScroll}
       >
-        <Link href={item.link !== "" ? item.link : contactScroll}>
         <Text
           fontSize={{ base: "xl", md: "3xl" }}
           color={"white"}
           fontWeight={"bold"}
+          _hover={{
+            color: "primary.main",
+            transition: "all 0.3s ease",
+          }}
         >
           <Text
             color={"primary.main"}
@@ -32,9 +38,8 @@ const ContactItem = ({ item, contactScroll }) => {
             {item.handle}
           </Text>
         </Flex>
-        </Link>
-      </Box>
-    
+      </Link>
+    </Box>
   );
 };
 
