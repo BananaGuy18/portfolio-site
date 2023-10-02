@@ -4,7 +4,6 @@ import StyleChar from "../functions/StyleChar";
 const ProjectItem = ({ project }) => {
   return (
     <Box
-      w={{ base: "none", md: "30rem" }}
       m={"4rem"}
     >
       <Text
@@ -21,7 +20,6 @@ const ProjectItem = ({ project }) => {
         fontStyle={"italic"}
         fontSize={"lg"}
         textAlign={"left"}
-        overflow={"hidden"}
       >
         {project.project_stack.split("").map((char, index) => (
           <span
@@ -39,6 +37,8 @@ const ProjectItem = ({ project }) => {
         fontSize={{ base: "md", md: "lg" }}
         mt={"1rem"}
         textAlign={"left"}
+        overflowWrap={"break-word"}
+        wordBreak={"break-word"}
       >
         {project.description}
       </Text>

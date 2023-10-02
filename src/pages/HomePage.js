@@ -29,14 +29,14 @@ const HomePage = () => {
               fontWeight={"bold"}
               fontSize={{ base: "4xl", md: "5xl" }}
               mb={"1rem"}
-              mt={{ base: "6rem", md: "none" }}
+              mt={{ base: "6rem", md: "3rem" }}
             >
               hello, im ryan.
             </Text>
             <Text
               color={"primary.gray"}
               fontWeight={"bold"}
-              fontSize={{ base: "xl", md: "3xl" }}
+              fontSize={{ base: "xl", md: "2xl" }}
             >
               full stack developer & <br /> student
             </Text>

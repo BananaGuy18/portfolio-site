@@ -4,7 +4,7 @@ import ContactGrid from "../components/ContactGrid";
 const ContactPage = ({ contactScroll }) => {
   return (
     <Box
-      height={{ base: "auto", md: "40vh" }}
+      height={{ base: "auto", md: "50vh" }}
       width={"100%"}
       bgColor={"primary.bg"}
       pb={{ base: "5rem", md: "none" }}

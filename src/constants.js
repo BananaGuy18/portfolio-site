@@ -55,7 +55,7 @@ const PROJECT_ITEMS = [
   {
     project_name: "Portfolio Website",
     project_stack: "[ CharkaUI , JavaScript , React ]",
-    description: "This site was made to display my projects and a short about me! (your looking right at it!).",
+    description: "This site was made to display my projects and a short about me! (you're looking right at it!).",
     live_site_link: "https://ryanwong.ca",
     git_repo_link: ""
   }

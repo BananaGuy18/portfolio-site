@@ -7,11 +7,12 @@ const AboutItem = ({ item, index }) => {
       key={index}
       direction={"column"}
       p={"2rem"}
+      
     >
       <Text
         color={"white"}
         fontWeight={"bold"}
-        fontSize={{ base: "2xl", md: "3xl" }}
+        fontSize={{ base: "2xl", md: "2xl" }}
         mb={"1rem"}
       >
         <Text
@@ -26,9 +27,9 @@ const AboutItem = ({ item, index }) => {
         color={"primary.gray"}
         fontStyle={"italic"}
         fontWeight={"medium"}
-        fontSize={{ base: "lg", md: "xl" }}
+        fontSize={{ base: "lg", md: "lg" }}
         whiteSpace={"pre-wrap"}
-        overflow={"scroll"}
+        overflow={"hidden"}
       >
         {item.description.split("").map((char, index) => (
           <span
